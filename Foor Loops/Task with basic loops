@@ -1,0 +1,26 @@
+# A supervisor has decided to check the workers productivity during working hours. He decided to punish the workers which
+their time in social media by cutting their salary. The penalties are:
+1. Facebook - 150
+2. Instagram - 100
+3. Reddit - 50
+Write a program which read the number of open browsers, the salary and afterward it read the name of the websites opened
+in these browsers. If the salary is completely cut write 'You have lost your salary.'. Otherwise, write how much money is left.
+
+n_tabs = int(input())
+salary = int(input())
+
+for tab in range(n_tabs):
+    current_website = input()
+    if current_website == 'Facebook':
+        salary -= 150
+    elif current_website == 'Instagram':
+        salary -= 100
+    elif current_website == 'Reddit':
+        salary -= 50
+
+    if salary <= 0:
+        print(f'You have lost your salary.')
+        break
+
+if salary > 0:
+    print(salary)
