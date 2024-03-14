@@ -1,0 +1,11 @@
+# Write a program which first read username and password on seperate inputs, then read guessing password an inifnite amount of 
+# times until you guess corecctly.
+
+username = input()
+password = input()
+
+while True:
+    password_username = input()
+    if password == password_username:
+        print(f'Welcome {username}!')
+        break
