@@ -1,0 +1,30 @@
+#Write a function that calculates the total price of an order and returns it. The function should receive one of the following products:
+# "coffee", "coke", "water", or "snacks", and a quantity of the product. The prices for a single piece of each product are:
+#• coffee - 1.50
+#• water - 1.00
+#• coke - 1.40
+#• snacks - 2.00
+#Print the result formatted to the second decimal place.
+
+def order(products, quantity):
+    final_price = 0
+    if products == 'coffee':
+        price_of_cofee = quantity * 1.50
+        final_price += price_of_cofee
+    elif products == 'water':
+        price_of_water = quantity * 1.00
+        final_price += price_of_water
+    elif products == 'coke':
+        price_of_coke = quantity * 1.40
+        final_price += price_of_coke
+    elif products == 'snacks':
+        price_of_snacks = quantity * 2.00
+        final_price += price_of_snacks
+
+    return final_price
+
+
+products = input()
+quantity = int(input())
+final_order = order(products, quantity)
+print(f'{final_order:.2f}')
