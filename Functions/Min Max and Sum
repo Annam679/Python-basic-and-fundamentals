@@ -1,0 +1,32 @@
+#Write a program that receives a sequence of numbers (integers) separated by a single space. It should print the min
+#and max values of the given numbers and the sum of all the numbers in the list. Use min(), max() and sum().
+#The output should be as follows:
+#• On the first line: "The minimum number is {minimum number}"
+#• On the second line: "The maximum number is {maximum number}"
+#• On the third line: "The sum number is: {sum of all numbers}
+
+def max_n(numbers):
+    max_number = max(numbers)
+    return max_number
+
+def min_n(numbers):
+    min_number = min(numbers)
+    return min_number
+
+def sum_n(numbers):
+    sum_numbers = sum(numbers)
+    return(sum_numbers)
+
+
+sequence_of_num = input().split()
+sequence_of_num_as_digits = []
+for numbers_as_chr in sequence_of_num:
+    sequence_of_num_as_digits.append(int(numbers_as_chr))
+
+result_max = max_n(sequence_of_num_as_digits)
+result_min = min_n(sequence_of_num_as_digits)
+result_sum = sum_n(sequence_of_num_as_digits)
+
+print(f"The minimum number is {result_min}")
+print(f"The maximum number is {result_max}")
+print(f"The sum number is: {result_sum}")
