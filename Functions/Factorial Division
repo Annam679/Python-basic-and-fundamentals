@@ -1,0 +1,21 @@
+#Write a function that receives two integer numbers. Calculate the factorial of each number.
+#Divide the first result by the second and print the division formatted to the second decimal point.
+
+def factorial(numberone, numbertwo):
+    factone = 1
+    facttwo = 1
+    final_division = 0
+    for i in range(numone, 1, -1):
+        factone *= i
+
+    for y in range(numtwo, 1, -1):
+        facttwo *= y
+
+    final_division = factone // facttwo
+    return final_division
+
+
+numone = int(input())
+numtwo = int(input())
+result = factorial(numone, numtwo)
+print(f'{result:.2f}')

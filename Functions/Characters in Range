@@ -1,0 +1,14 @@
+#Write a function that receives two characters and returns a single string with all the characters in between them
+#(according to the ASCII code), separated by a single space. Print the result on the console.
+
+def all_chr(first, second):
+    characters = []
+    for curr_chr in range(ord(first)+1, ord(second)):
+        characters.append(chr(curr_chr))
+    return characters
+
+
+first_chr = input()
+second_chr = input()
+result = all_chr(first_chr, second_chr)
+print(" ".join(result))
