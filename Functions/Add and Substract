@@ -5,15 +5,19 @@
 #Wrap the two functions in a function named add_and_subtract() which will receive the three numbers as parameters.
 #Print the result of the subtract() function on the console.
 
+def sum_numbers(first, second):
+    return first + second
 
-def smallest_number(some_numbers):
-    min_element = min(some_numbers)
-    return min_element
+def substract(sum, third):
+    return sum - third
 
-first_num = int(input())
-second_num = int(input())
-third_num = int(input())
-numbers = [first_num, second_num, third_num]
-some_numbers = numbers
-smallest_element = smallest_number(numbers)
-print(smallest_element)
+def add_and_subtract(num_one, num_two, num_three):
+    sum_of_first_and_second = sum_numbers(num_one, num_two)
+    result = substract(sum_of_first_and_second, num_three)
+    return result
+
+first = int(input())
+second = int(input())
+third = int(input())
+
+print(add_and_subtract(first, second, third))
