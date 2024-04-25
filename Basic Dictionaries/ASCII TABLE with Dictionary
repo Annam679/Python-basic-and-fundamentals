@@ -1,0 +1,9 @@
+#Write a program that receives a list of characters separated by ", ". It should create a dictionary with each character as a key and its ASCII value as a value.
+#Try solving that problem using comprehension.
+#Examples
+#Input | Output
+#a, b, c, a | {'a': 97, 'b': 98, 'c': 99}
+
+list = input().split(", ")
+dictionary = {key: ord(key) for key in list}
+print(dictionary)
