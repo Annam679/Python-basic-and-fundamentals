@@ -1,0 +1,22 @@
+#Write a program that counts all characters in a string except for space (" ").
+#Print all the occurrences in the following format:
+#"{char} -> {occurrences}"
+
+#Input:
+#text
+# Output:
+#t -> 2
+#e -> 1
+#x -> 1
+
+string = [char for char in input() if char != ' ']
+dictionary = {}
+
+for str in string:
+    if str not in dictionary:
+        dictionary[str] = 1
+    else:
+        dictionary[str] += 1
+
+for character, occurance in dictionary.items():
+    print(f"{character} -> {occurance}")
